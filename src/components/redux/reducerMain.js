@@ -1,3 +1,6 @@
+
+
+//база стэйта
 const initialState={
     state:[],
     users:[],
@@ -8,6 +11,7 @@ const initialState={
 
 }
 
+//думаю тут все понятно по названию актион тупе
 
 export const reducerMain = (state=initialState, action)=>{
     switch(action.type){
@@ -49,6 +53,12 @@ export const reducerMain = (state=initialState, action)=>{
         case 'ADD_EMPLOY':{
             return {...state, state: [ action.add, ...state.state]}
         }
+        case 'ADD_USER':{
+            return {...state, users: [ action.user, ...state.users]}
+        }
+        case 'FIND_USER':{
+            return {...state, users: action.user}
+        }
         
         
 
@@ -70,4 +80,6 @@ export const sortEm = (sort) =>({type: 'SORT_Em', sort})
 export const sortPh = (sort) =>({type: 'SORT_Ph', sort})
 export const showEmploy = (show) =>({type: 'SHOW_EMPLOY', show})
 export const addEmploy = (add) =>({type: 'ADD_EMPLOY', add})
+export const addUser = (user) =>({type: 'ADD_USER', user})
+export const findUser = (user) =>({type: 'FIND_USER', user})
 

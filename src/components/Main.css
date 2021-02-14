@@ -6,6 +6,16 @@
     color: black;
     font-weight: bold;
     
+    
+}
+
+.find{
+    width: 300px;
+    margin: 10px auto;
+    text-align: center;
+}
+.find button{
+    margin: 15px 15px 0px 0px;
 }
 
 .body_container{
@@ -17,15 +27,19 @@
 }
 
 .table{ 
+    border-radius: 5px;
     border: 1px solid black;
     width: 700px;
     margin: 0 auto;
+    background: black;
 }
 
 .table tr:nth-child(1) th{
     font-size: 15px;
     padding: 10px 15px;
-    
+}
+.table tr {
+    background: white;
 }
 
 .page{
@@ -78,4 +92,14 @@
     border: 1px solid black;
     width: 500px;
     margin: 0 auto;
+    border-radius: 20px;
 }
+
+.body_container .showEmploy{
+    border: 1px solid black;
+    
+    width: 700px;
+     margin: 50 auto;
+     
+}
+
