@@ -17,9 +17,9 @@ class MainContainer extends React.Component {
         Ph: true,
         btn: true
     }
-    //Получаем данные с сервера в виде JSON
+    //Получаем данные с сервера в виде JSON 
     componentDidMount() {
-        axios.get(`http://www.filltext.com/?rows=1000&id={number|1000}&firstName={firstName}&delay=3&lastName={lastName}&email={email}&phone={phone|(xxx)xxx-xx-xx}&address={addressObject}&description={lorem|32}`)
+        axios.get(`https://www.filltext.com/?rows=1000&id={number|1000}&firstName={firstName}&delay=3&lastName={lastName}&email={email}&phone={phone|(xxx)xxx-xx-xx}&address={addressObject}&description={lorem|32}`)
             .then(state => {
                 //добавляю в Стэйт
                 this.props.getState(state.data)
@@ -51,7 +51,7 @@ class MainContainer extends React.Component {
         if(e=== Math.ceil(this.props.state.usersSize / this.props.state.pageSize)){
             
             for (let i = len - 50; i < len- 50 + this.props.state.usersSize%50 ; i++) {
-                console.log(users[i])
+                
                 arr.push(users[i])
             }
             
